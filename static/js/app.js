@@ -19,10 +19,10 @@ function buildTable(data) {
         Object.values(dataRow).forEach((val) => {
             let cell = row.append("td");
             cell.text(val);
-            }
-        );
-    });
-}
+            });
+        });
+    }
+
 
 function handleClick() {
     // get datetime value from filter
@@ -31,7 +31,7 @@ function handleClick() {
 
     //check if date was entered and filter data using date
     if (date) {
-        //apply filter to table data, keeping only rows wehre 'datetime' value
+        //apply filter to table data, keeping only rows where 'datetime' value
         // matches filter value
         filteredData = filteredData.filter(row => row.datetime === date);
     };
